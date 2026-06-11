@@ -85,6 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
+    const venueLat = 13.3412887;
+    const venueLng = 77.1076298;
+
+
+    
+
+
     /* =========================
    ADD TO CALENDAR
 ========================= */
@@ -158,4 +165,53 @@ END:VCALENDAR`;
 
 });
 
+
+
 });
+
+/* ==========================
+   TRAVEL DIRECTIONS
+========================== */
+
+function openDirections(mode) {
+
+    const destination =
+        "13.3412887,77.1076298";
+
+    let url = "";
+
+    switch(mode){
+
+        case "driving":
+
+            url =
+            `https://www.google.com/maps/dir/?api=1&destination=${destination}&travelmode=driving`;
+
+            break;
+
+        case "train":
+
+            url =
+            `https://www.google.com/maps/dir/?api=1&destination=${destination}&travelmode=transit`;
+
+            break;
+
+        case "bus":
+
+            url =
+            `https://www.google.com/maps/dir/?api=1&destination=${destination}&travelmode=transit`;
+
+            break;
+
+        case "flight":
+
+            url =
+            `https://www.google.com/maps/search/?api=1&query=airport+near+Tumakuru`;
+
+            break;
+    }
+
+    console.log("Opening:", url);
+
+    window.open(url, "_blank");
+}
