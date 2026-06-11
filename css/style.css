@@ -590,3 +590,47 @@ blockquote{
     opacity:0;
     visibility:hidden;
 }
+
+.calendar-section{
+
+    text-align:center;
+
+    margin-top:60px;
+}
+
+.calendar-section h3{
+
+    color:#6e1f1a;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+}
+
+.calendar-buttons{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.calendar-btn{
+
+    background:#d58f7d;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    transition:.3s;
+}
+
+.calendar-btn:hover{
+
+    transform:translateY(-3px);
+}
