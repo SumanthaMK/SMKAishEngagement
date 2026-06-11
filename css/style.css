@@ -469,3 +469,124 @@ blockquote{
         width:60px;
     }
 }
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+.music-player{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:12px 20px;
+
+    background:rgba(255,255,255,.95);
+
+    border-radius:50px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    backdrop-filter:blur(10px);
+}
+
+.music-player button{
+
+    border:none;
+    background:none;
+
+    cursor:pointer;
+
+    font-size:24px;
+}
+
+.music-player span{
+
+    font-size:18px;
+    color:#7c5638;
+}
+
+/* =========================
+   ENTER SCREEN
+========================= */
+
+.welcome-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2c1718,
+        #472727,
+        #2c1718
+    );
+
+    z-index:10000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.welcome-box{
+
+    text-align:center;
+    color:white;
+}
+
+.welcome-box h2{
+
+    font-size:60px;
+    margin-bottom:20px;
+
+    font-family:'Great Vibes',cursive;
+}
+
+.welcome-box p{
+
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.welcome-box button{
+
+    padding:16px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:#d6a06c;
+    color:white;
+
+    font-size:20px;
+}
+
+.welcome-overlay{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:all .6s ease;
+}
+
+.welcome-overlay.hide{
+    opacity:0;
+    visibility:hidden;
+}
