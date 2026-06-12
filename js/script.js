@@ -1,3 +1,4 @@
+document.body.classList.add("lock-scroll");
 document.addEventListener("DOMContentLoaded", () => {
 
     const music = document.getElementById("bgMusic");
@@ -20,9 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             overlay.classList.add("hide");
 
-            setTimeout(() => {
-                overlay.remove();
-            }, 600);
+document.body.classList.remove("lock-scroll");
+
+setTimeout(() => {
+    overlay.remove();
+}, 600);
 
         });
 
@@ -214,4 +217,56 @@ function openDirections(mode) {
     console.log("Opening:", url);
 
     window.open(url, "_blank");
+}
+
+if (typeof VanillaTilt !== "undefined") {
+
+    VanillaTilt.init(
+        document.querySelectorAll(
+            ".travel-box, .calendar-btn"
+        ),
+        {
+            max: 4,
+            speed: 500,
+            scale: 1.02,
+            glare: false
+        }
+    );
+
+}
+
+
+/* ==========================
+   FLOWING PETALS
+========================== */
+
+const petalsContainer =
+document.querySelector(".petals");
+
+if (petalsContainer) {
+
+    for (let i = 0; i < 25; i++) {
+
+        const petal =
+            document.createElement("div");
+
+        petal.classList.add("petal");
+
+        petal.innerHTML = "🌸";
+
+        petal.style.left =
+            Math.random() * 100 + "%";
+
+        petal.style.animationDuration =
+            (8 + Math.random() * 8) + "s";
+
+        petal.style.animationDelay =
+            Math.random() * 5 + "s";
+
+        petal.style.opacity =
+            Math.random();
+
+        petalsContainer.appendChild(petal);
+    }
+
 }
