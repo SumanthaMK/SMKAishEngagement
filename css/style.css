@@ -889,3 +889,21 @@ body.lock-scroll{
     font-size:24px;
     line-height:1.5;
 }
+
+.custom-date{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    justify-content:flex-start;
+}
+
+.custom-date span{
+    font-size:clamp(28px,3vw,50px);
+}
+
+@media(max-width:768px){
+
+    .custom-date{
+        justify-content:center;
+    }
+}
