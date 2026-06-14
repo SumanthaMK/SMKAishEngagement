@@ -270,3 +270,10 @@ if (petalsContainer) {
     }
 
 }
+
+AOS.init({
+    duration: 1200,
+    once: true,
+    offset: 100,
+    easing: "ease-out-cubic"
+});
